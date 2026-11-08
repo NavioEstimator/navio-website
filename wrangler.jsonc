@@ -1,7 +1,7 @@
 {
   // Cloudflare settings: publishes everything in the "public" folder
   // to the Worker that serves navioestimate.com.
-  "name": "autumn-haze-c4ca",
+  "name": "navio-website",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./public",
