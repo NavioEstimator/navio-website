@@ -4,528 +4,550 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Navio Estimate | Fixed-Price Project Estimates for Builders &amp; Trades</title>
-<meta name="description" content="Fixed-price project estimates for builders, construction trades and interior designers. $320 flat. Delivered in 2–5 business days. Send us the plans — keep your evenings.">
+<meta name="description" content="Fixed-price project estimates for builders, construction trades and interior designers. $320 flat, paid up front. Delivered in 2–5 business days, Australia-wide. Revisions included.">
 <meta name="theme-color" content="#D96B43">
 <meta property="og:title" content="Navio Estimate | Fixed-price estimates. Delivered fast.">
 <meta property="og:description" content="$320 flat. Delivered in 2–5 business days. Send us the plans — keep your evenings.">
-<meta property="og:image" content="logo.png">
+<meta property="og:image" content="https://navioestimate.com/img/reception.jpg">
 <link rel="icon" type="image/png" href="logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/reception.jpg">
 <style>
+:root{--cream:#F8F1EA;--cream2:#F2E8DE;--paper:#FFFFFF;--ink:#3D2B1F;--dark:#2C2118;--terra:#D96B43;--terra-d:#A4482A;--terra-l:#E8A07A;--muted:#5E4A3A;--line:#E6D9CB;--line2:#D8C7B5}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:#FBF6F0}
-a{color:#3D2B1F}a:hover{color:#A4482A}
-a[href^="#"]:hover,nav a:hover{opacity:.85}
-input:focus,select:focus,textarea:focus{outline:2px solid #D96B43;outline-offset:1px;border-color:#D96B43}
-button:disabled{opacity:.7;cursor:default}
-@media (max-width:720px){
-  header nav{gap:16px!important;font-size:15px!important}
-  header nav a:not(:last-child){display:none!important}
-  section{padding-top:72px!important;padding-bottom:72px!important}
-  form{padding:24px!important}
-  #what-we-estimate > div > div:last-child > div:first-child{padding:28px!important}
-  #pricing > div > div:last-child{padding:28px!important}
-  #top > div:first-child > div:last-child{box-shadow:8px 8px 0 #D96B43!important;padding:24px!important}
-}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--ink)}a:hover{color:var(--terra-d)}
+h1,h2,h3{margin:0;color:var(--ink);font-weight:800;letter-spacing:-.025em;line-height:1.05}
+h1{font-size:clamp(44px,6.2vw,80px);letter-spacing:-.035em;line-height:1.0}
+h2{font-size:clamp(36px,4.6vw,58px);letter-spacing:-.03em}
+h3{font-size:22px;letter-spacing:-.015em;line-height:1.2}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.sec{padding:120px 0}
+.eyebrow{display:block;margin:0 0 16px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra-d)}
+.lead{font-size:20px;color:var(--muted);max-width:560px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;font:inherit;font-weight:700;font-size:18px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--terra);color:var(--dark)}.btn-primary:hover{background:#E07A54;color:var(--dark)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.btn-dark{background:var(--ink);color:var(--cream)}.btn-dark:hover{background:var(--dark);color:var(--cream)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;margin-bottom:56px}
 
-/* ---- Client journey ---- */
-.journey-wrap{display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start}
-.journey-side{flex:1 1 320px;min-width:0;position:sticky;top:110px}
-.journey{flex:999 1 560px;min-width:0;list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:28px}
-.journey::before{content:"";position:absolute;left:31px;top:32px;bottom:32px;width:3px;background:repeating-linear-gradient(#D96B43 0 10px,transparent 10px 18px)}
-.step{display:grid;grid-template-columns:64px minmax(0,1fr);gap:28px;align-items:start;position:relative}
-.node{width:64px;height:64px;background:#D96B43;color:#2C2118;display:flex;align-items:center;justify-content:center;outline:6px solid #FBF6F0;position:relative;z-index:1}
-.step:last-child .node{background:#3D2B1F;color:#FBF6F0}
-.step-card{background:#FFFFFF;border:1.5px solid #3D2B1F;padding:28px 32px;position:relative;transition:transform .2s ease,box-shadow .2s ease}
-.step-card::before{content:"";position:absolute;left:-11px;top:22px;width:18px;height:18px;background:#FFFFFF;border-left:1.5px solid #3D2B1F;border-bottom:1.5px solid #3D2B1F;transform:rotate(45deg)}
-.step-card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 #D96B43}
-.step-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;margin-bottom:10px}
-.step-num{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.12em;color:#A4482A}
-.chip{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;background:#F6E6DA;color:#3D2B1F;padding:6px 10px;display:inline-flex;align-items:center;gap:6px}
-.step-card h3{margin:0 0 8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1.05;text-transform:uppercase}
-.step-card p{margin:0;color:#5A4636}
-.ticks{list-style:none;margin:16px 0 0;padding:16px 0 0;border-top:1px dashed #CBB9A6;display:flex;flex-wrap:wrap;gap:8px 24px;font-size:16px}
-.ticks li{display:flex;align-items:center;gap:8px}
-.tl-bar{display:flex;height:10px;margin:18px 0 10px;background:#54402F}
-.tl-bar span{display:block;height:100%}
-/* ---- FAQ ---- */
-.faq-wrap{display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start}
-.faq-side{flex:1 1 320px;min-width:0;position:sticky;top:110px}
-.faq-list{flex:999 1 560px;min-width:0;border-top:3px solid #3D2B1F}
-.faq-list details{border-bottom:1px solid #E2D3C2}
-.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 4px;min-height:44px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;line-height:1.15;text-transform:uppercase;color:#3D2B1F}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(248,241,234,.94);backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+.brand img{height:40px;width:auto}
+.nav{display:flex;align-items:center;gap:28px;font-size:16px;font-weight:600}
+.nav a{text-decoration:none;color:var(--ink)}
+.nav .btn{min-height:46px;padding:0 20px;font-size:16px;color:var(--cream)}
+.nav .btn:hover{color:var(--cream)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(760px,calc(100vh - 77px));background:var(--cream)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:72px 64px 72px max(24px,calc((100vw - 1240px)/2 + 24px))}
+.hero-copy .lead{margin:28px 0 40px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-photo{position:relative;border-left:20px solid var(--terra);min-height:420px}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:32px;bottom:32px;background:var(--ink);color:var(--cream);display:flex;gap:28px;padding:22px 28px}
+.badge div+div{border-left:1px solid #5B4636;padding-left:28px}
+.badge small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-l)}
+.badge strong{display:block;font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.trust{background:var(--ink);color:#EADCCB}
+.trust ul{list-style:none;margin:0 auto;padding:22px 24px;max-width:1240px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:16px;font-weight:600}
+.trust li{display:flex;align-items:center;gap:10px}.trust svg{color:var(--terra)}
+
+/* how it works */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.step{background:var(--cream2);border:1.5px solid var(--line);padding:32px 28px 36px;min-height:340px;display:flex;flex-direction:column;gap:14px;transition:transform .2s ease}
+.step:hover{transform:translateY(-6px)}
+.step-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
+.step-n{font-size:64px;font-weight:800;letter-spacing:-.04em;line-height:.9;color:var(--terra)}
+.step-ic{color:var(--ink);padding-top:6px}
+.step p{color:var(--muted);font-size:16px}
+.step:first-child{background:var(--terra);border-color:var(--terra)}
+.step:first-child .step-n,.step:first-child h3,.step:first-child .step-ic{color:var(--cream)}
+.step:first-child p{color:#FFF4EC}
+.step:last-child{background:var(--ink);border-color:var(--ink)}
+.step:last-child h3,.step:last-child .step-ic{color:var(--cream)}
+.step:last-child .step-n{color:var(--terra-l)}
+.step:last-child p{color:#E6D9CB}
+.steps-note{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px 28px;color:var(--muted);font-size:16px}
+.steps-note span{display:flex;align-items:center;gap:8px}.steps-note svg{color:var(--terra)}
+
+/* what we estimate */
+.feature{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);background:var(--paper);border:1.5px solid var(--line)}
+.feature-photo{position:relative;min-height:460px}
+.feature-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feature-copy{padding:48px;display:flex;flex-direction:column;gap:18px}
+.tag{align-self:flex-start;background:var(--terra);color:var(--dark);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px}
+.feature-copy h3{font-size:clamp(32px,3.2vw,44px);letter-spacing:-.03em}
+.feature-copy p{color:var(--muted)}
+.ticks{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px;font-size:17px}
+.ticks li{display:flex;gap:10px;align-items:center}.ticks svg{color:var(--terra);flex:none}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.gallery figure{margin:0;position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--line)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:14px;bottom:14px;background:var(--cream);color:var(--ink);font-size:14px;font-weight:700;padding:7px 12px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px;margin-top:16px}
+.resi{position:relative;min-height:440px;overflow:hidden;display:flex;align-items:flex-end}
+.resi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.resi::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(44,33,24,.88) 0%,rgba(44,33,24,.25) 55%,rgba(44,33,24,0) 75%)}
+.resi-copy{position:relative;z-index:1;padding:36px;color:var(--cream)}
+.resi-copy h3{color:var(--cream);font-size:32px;margin-bottom:10px}
+.resi-copy p{color:#F1E6DA;max-width:440px}
+.mini{display:grid;gap:16px}
+.mini div{background:var(--paper);border:1.5px solid var(--line);padding:28px 30px;display:flex;flex-direction:column;gap:8px}
+.mini p{color:var(--muted);font-size:16px}
+.img-note{margin-top:18px;font-size:13px;color:#7A6656}
+
+/* what you get */
+.get{position:relative;overflow:hidden;background:#F7EEE6}
+.get::before{content:"";position:absolute;width:640px;height:640px;border-radius:50%;background:#F0DFD2;right:-140px;top:-220px}
+.get .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.inc{list-style:none;margin:32px 0 36px;padding:0;display:grid;gap:14px}
+.inc li{display:flex;gap:16px;align-items:baseline;font-size:20px}
+.inc-n{font-weight:800;color:var(--terra);min-width:30px;letter-spacing:-.02em}
+.inc strong{font-weight:600}
+.inc-d{display:block;font-size:15px;color:var(--muted);margin-top:2px}
+.files{display:flex;flex-wrap:wrap;gap:12px}
+.file{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;font-weight:700;font-size:17px}
+.file-x{background:var(--ink);color:var(--cream)}.file-p{background:var(--terra);color:var(--dark)}
+.pages{position:relative;height:600px}
+.page{position:absolute;background:var(--paper);box-shadow:0 30px 60px -20px rgba(61,43,31,.35),0 2px 6px rgba(61,43,31,.08)}
+.page-back{width:62%;height:86%;left:0;top:4%;transform:rotate(-4deg);padding:34px 0 0}
+.page-back .pb-logo{padding:0 32px;display:flex;align-items:center;gap:10px}
+.page-back .pb-logo img{height:30px}
+.pb-block{margin:42px 0 0 32px;background:var(--terra);color:var(--cream);padding:26px 28px 30px;border-bottom:6px solid var(--ink)}
+.pb-block small{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.9}
+.pb-block strong{display:block;font-size:44px;font-weight:800;line-height:.98;letter-spacing:-.03em;margin-top:8px;text-transform:uppercase}
+.pb-meta{padding:26px 32px;font-size:13px;display:grid;gap:6px}
+.pb-meta b{font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-right:8px}
+.page-front{width:66%;right:0;top:8%;transform:rotate(3deg);padding:32px 30px 26px}
+.pf-k{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra-d)}
+.pf-t{font-size:26px;font-weight:800;letter-spacing:-.025em;margin:4px 0 14px}
+.page-front table{width:100%;border-collapse:collapse;font-size:13px}
+.page-front td{padding:7px 0;border-bottom:1px solid var(--line)}
+.page-front .q{color:#7A6656;text-align:right;padding-right:14px;white-space:nowrap}
+.page-front .n{text-align:right;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.page-front tr.s td{border-bottom:none;padding-top:10px}
+.page-front tr.t td{border-top:2px solid var(--ink);border-bottom:none;font-size:16px;font-weight:800;padding-top:10px}
+.pm2{margin-top:14px;background:var(--ink);color:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:14px 18px;font-weight:700;font-size:14px}
+.pm2 strong{font-size:28px;color:var(--terra-l);letter-spacing:-.03em}
+.pf-note{margin-top:10px;font-size:11px;color:#7A6656}
+
+/* pricing */
+.price{background:var(--terra);color:var(--dark)}
+.price .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:56px;align-items:center}
+.price h2{color:var(--dark)}
+.price .eyebrow{color:var(--dark)}
+.price .lead{color:#3A2418;margin-top:22px}
+.price-card{background:var(--ink);color:var(--cream);padding:40px}
+.price-card .amt{display:flex;align-items:baseline;gap:12px}
+.price-card .amt strong{font-size:96px;font-weight:800;letter-spacing:-.05em;line-height:.9;color:var(--terra)}
+.price-card .amt span{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E6D9CB}
+.price-card p{color:#E6D9CB;margin:18px 0 22px}
+.price-card ul{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:12px}
+.price-card li{display:flex;gap:12px;align-items:center}.price-card li svg{color:var(--terra);flex:none}
+.price-card .btn{width:100%}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.why div{display:flex;flex-direction:column;gap:14px;border-top:3px solid var(--ink);padding-top:28px}
+.why .why-ic{color:var(--terra-d)}
+.why p{color:var(--muted)}
+
+/* about */
+.about{background:var(--ink);color:var(--cream)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.about h2{color:var(--cream);margin-bottom:26px}
+.about .eyebrow{color:var(--terra-l)}
+.about p{color:#E6D9CB}.about p+p{margin-top:18px}
+.about figure{margin:0;border-left:6px solid var(--terra);padding:6px 0 6px 40px}
+.about blockquote{margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:700;letter-spacing:-.025em;line-height:1.2;color:var(--cream)}
+.about figcaption{margin-top:22px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-l)}
+
+/* faq */
+.faq{background:var(--paper)}
+.faq .wrap{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:64px;align-items:start}
+.faq-side{position:sticky;top:110px}
+.faq-side .lead{margin:20px 0 28px;font-size:18px}
+.ask{border:1.5px solid var(--line2);background:var(--cream);padding:24px;display:flex;gap:16px}
+.ask svg{color:var(--terra);flex:none}
+.ask p{font-size:16px;color:var(--muted);margin-top:4px}
+.faq-list{border-top:2px solid var(--ink)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 2px;min-height:44px;font-size:21px;font-weight:700;letter-spacing:-.015em;line-height:1.3}
 .faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary:hover{color:#A4482A}
-.faq-list summary:focus-visible{outline:2px solid #D96B43;outline-offset:4px}
-.pm{flex:none;width:40px;height:40px;border:1.5px solid #3D2B1F;position:relative;transition:background .2s}
-.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:2px;background:#3D2B1F;transform:translate(-50%,-50%);transition:transform .25s ease,background .2s}
+.faq-list summary:hover{color:var(--terra-d)}
+.faq-list summary:focus-visible{outline:2px solid var(--terra);outline-offset:4px}
+.pm{flex:none;width:40px;height:40px;border:1.5px solid var(--ink);position:relative;transition:background .2s}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:2px;background:var(--ink);transform:translate(-50%,-50%);transition:transform .25s ease}
 .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
-details[open] .pm{background:#D96B43;border-color:#D96B43}
-details[open] .pm::after{transform:translate(-50%,-50%) rotate(0deg)}
-.faq-a{padding:0 64px 28px 4px;color:#5A4636}
-.faq-a p{margin:0 0 12px}.faq-a p:last-child{margin:0}
+details[open] .pm{background:var(--terra);border-color:var(--terra)}
+details[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.faq-a{padding:0 64px 26px 2px;color:var(--muted)}
+.faq-a p+p{margin-top:12px}
 
-/* ---- What's in your estimate ---- */
-.est-wrap{display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start}
-.est-doc{flex:1 1 520px;min-width:0;position:relative}
-.sheet{background:#FFFFFF;border:1.5px solid #3D2B1F;box-shadow:14px 14px 0 #D96B43;padding:28px;position:relative}
-.sheet table{width:100%;border-collapse:collapse;font-size:14px;min-width:460px}
-.sheet th{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-align:left;color:#7A6656;font-weight:500;padding:8px 6px;border-bottom:2px solid #3D2B1F}
-.sheet td{padding:9px 6px;border-bottom:1px dashed #E2D3C2}
-.sheet .n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-.sheet tr.sub td{border-bottom:1px solid #CBB9A6;font-weight:600}
-.sheet tr.tot td{border-bottom:none;border-top:2px solid #3D2B1F;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;padding-top:12px}
-.stamp{position:absolute;top:22px;right:22px;transform:rotate(8deg);border:2px solid #D96B43;color:#C45C26;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;padding:5px 10px}
-.filetag{display:inline-flex;align-items:center;gap:10px;background:#3D2B1F;color:#FBF6F0;padding:10px 14px;font-size:15px;font-weight:600}
-.filetag b{font-family:'IBM Plex Mono',monospace;font-size:12px;background:#D96B43;color:#2C2118;padding:3px 6px;letter-spacing:.06em}
-.inc-grid{flex:1 1 440px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;background:#E2D3C2;border:2px solid #E2D3C2}
-.inc{background:#FBF6F0;padding:22px;display:flex;flex-direction:column;gap:8px}
-.inc .ic{width:44px;height:44px;background:#F6E6DA;color:#A4482A;display:flex;align-items:center;justify-content:center}
-.inc h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;line-height:1.05;text-transform:uppercase}
-.inc p{margin:0;font-size:16px;color:#5A4636}
-@media (max-width:720px){.sheet{padding:18px;box-shadow:8px 8px 0 #D96B43}.stamp{top:12px;right:12px}}
-/* ---- Reveal on scroll ---- */
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.contact .lead{margin:22px 0 36px}
+.mail{display:inline-flex;align-items:center;gap:12px;font-size:22px;font-weight:700;text-decoration:none;border-bottom:3px solid var(--terra);padding-bottom:6px;word-break:break-all}
+.contact small{display:block;margin-top:18px;color:var(--muted);font-size:15px}
+form{background:var(--paper);border:1.5px solid var(--line2);padding:40px;display:grid;gap:18px}
+form h3{font-size:26px}
+.f2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+input,select,textarea{font:inherit;font-size:16px;font-weight:400;padding:12px 14px;border:1.5px solid var(--line2);background:#FFFCF8;color:var(--ink);min-height:50px;border-radius:0}
+textarea{resize:vertical;min-height:120px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--terra);outline-offset:1px;border-color:var(--terra)}
+form .btn{width:100%}
+button:disabled{opacity:.7;cursor:default}
+.form-note{font-size:15px;color:var(--muted)}
+
+/* footer */
+footer{background:var(--dark);color:#E6D9CB;font-size:16px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px;padding:64px 24px 40px}
+.foot-brand{display:flex;align-items:center;gap:14px}
+.foot-brand img{width:46px;height:46px;object-fit:cover;background:#FEFBF3}
+.foot-brand span{font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--cream)}
+.foot p{max-width:360px;margin-top:14px}
+.foot-cols{display:flex;flex-wrap:wrap;gap:64px}
+.foot-cols div{display:flex;flex-direction:column;gap:10px}
+.foot-cols b{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra-l)}
+.foot a{color:#E6D9CB;text-decoration:none}.foot a:hover{color:var(--cream)}
+.legal{border-top:1px solid #4A3626;padding:22px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px}
+
+/* reveal */
 .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.step-card,.step-card:hover{transition:none;transform:none}html{scroll-behavior:auto}}
-@media (max-width:720px){
-  .journey-side,.faq-side{position:static}
-  .journey::before{left:23px}
-  .step{grid-template-columns:48px minmax(0,1fr);gap:18px}
-  .node{width:48px;height:48px;outline-width:4px}
-  .node svg{width:22px;height:22px}
-  .step-card{padding:22px 20px}
-  .step-card::before{top:14px}
-  .step-card h3{font-size:26px}
-  .faq-list summary{font-size:22px;padding:20px 0}
-  .faq-a{padding:0 0 24px}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.step,.btn,.gallery img{transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:1100px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .step{min-height:0}
+  .step:last-child{grid-column:1/-1}
+  .get .wrap{grid-template-columns:1fr}
+  .pages{height:560px;max-width:620px;width:100%;margin:0 auto}
+}
+@media (max-width:900px){
+  .nav a:not(.btn){display:none}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:56px 24px}
+  .hero-photo{border-left:none;border-top:14px solid var(--terra);min-height:380px}
+  .feature,.split,.price .wrap,.about .wrap,.faq .wrap,.contact .wrap{grid-template-columns:1fr}
+  .feature-photo{min-height:300px}
+  .faq-side{position:static}
+  .why{grid-template-columns:1fr;gap:32px}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .sec{padding:80px 0}
+  .brand img{height:34px}
+  .nav .btn{min-height:44px;padding:0 14px;font-size:15px;white-space:nowrap}
+  .brand img{height:30px}
+  .badge{left:16px;right:16px;bottom:16px;padding:16px 18px;gap:18px}
+  .badge div+div{padding-left:18px}
+  .badge strong{font-size:30px}
+  .steps{grid-template-columns:1fr}
+  .step-n{font-size:52px}
+  .step-head{margin-bottom:14px}
+  .gallery{grid-template-columns:1fr}
+  .feature-copy{padding:30px 24px}
+  .resi-copy{padding:26px}
+  .pages{height:auto;display:grid;gap:0}
+  .page{position:relative;width:auto;inset:auto;transform:none}
+  .page-back{display:none}
+  .page-front{transform:rotate(1.5deg);margin:8px 6px 16px}
+  .price-card{padding:28px}
+  .price-card .amt strong{font-size:76px}
+  .faq-list summary{font-size:19px;padding:20px 0}
+  .faq-a{padding:0 0 22px}
+  form{padding:24px}
+  .f2{grid-template-columns:1fr}
 }
 </style>
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does an estimate cost?", "acceptedAnswer": {"@type": "Answer", "text": "$320 per job — one fixed price, paid up front. No hourly rates and no scope creep on the estimate itself."}}, {"@type": "Question", "name": "Is $320 really the price for every job?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every job is $320, whatever the type or size of the project. You know exactly what you’ll pay before you send the plans."}}, {"@type": "Question", "name": "When do I pay?", "acceptedAnswer": {"@type": "Answer", "text": "Payment of $320 is made up front, before work on your estimate begins."}}, {"@type": "Question", "name": "What if my plans change?", "acceptedAnswer": {"@type": "Answer", "text": "No problem — changes can be made, and all revisions are included in the $320. Just send us the updated plans."}}, {"@type": "Question", "name": "Do you work Australia-wide?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We prepare estimates for projects right across Australia, using practical rates built for Australian work."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "Your estimate is delivered in 2–5 business days. We reply within 1 business day of receiving your plans to confirm we’re under way."}}, {"@type": "Question", "name": "What do I need to send you?", "acceptedAnswer": {"@type": "Answer", "text": "Just the plans. Email them to admin@navioestimate.com.au or use the request form. A short note about the job is helpful but not required."}}, {"@type": "Question", "name": "What types of projects do you estimate?", "acceptedAnswer": {"@type": "Answer", "text": "Commercial fitouts (offices, retail, hospitality, medical suites and refurbishments), residential projects (renovations, extensions, new builds and multi-unit work), trade packages, interior design packages, and small works & alterations."}}, {"@type": "Question", "name": "What will I receive?", "acceptedAnswer": {"@type": "Answer", "text": "A complete estimate prepared by our in-house team: scope of works, a trade-by-trade breakdown, measured quantities, line-item rates and pricing, margin and contingency, and a clear list of inclusions and exclusions. You get it as an editable Excel file plus a clean PDF summary."}}, {"@type": "Question", "name": "Can I use the estimate for tendering?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Our estimates are built to be used — for pricing jobs and for tenders, not just to look neat on paper."}}, {"@type": "Question", "name": "Who prepares the estimates?", "acceptedAnswer": {"@type": "Answer", "text": "Our in-house estimation team. Navio Estimate was started by a director with years of hands-on construction experience, so the numbers are built for how jobs really run on site."}}]}</script>
 </head>
 <body>
-<div style="width: 100%; background: #FBF6F0; color: #3D2B1F; font-family: 'Barlow', system-ui, sans-serif; font-size: 18px; line-height: 1.55">
 
-<!-- NAV -->
-<header style="background: #FEFBF3; border-bottom: 1px solid #EADCCB; position: sticky; top: 0; z-index: 10">
-<div style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#top" aria-label="Navio Estimate home" style="display: flex; align-items: center; min-height: 44px"><img src="logo.png" alt="Navio Estimate" style="height: 44px; width: auto; display: block"></a>
-<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 16px; font-weight: 500">
-<a href="#how-it-works" style="color: #3D2B1F; text-decoration: none">How it works</a>
-<a href="#what-we-estimate" style="color: #3D2B1F; text-decoration: none">What we estimate</a>
-<a href="#pricing" style="color: #3D2B1F; text-decoration: none">Pricing</a>
-<a href="#faq" style="color: #3D2B1F; text-decoration: none">FAQ</a>
-<a href="#contact" style="background: #3D2B1F; color: #FBF6F0; text-decoration: none; font-weight: 600; padding: 12px 20px; min-height: 44px; display: inline-flex; align-items: center">Send us your plans</a>
+<header class="top">
+<div class="wrap">
+<a href="#top" class="brand" aria-label="Navio Estimate home"><img src="logo.png" alt="Navio Estimate" width="202" height="40"></a>
+<nav class="nav" aria-label="Main">
+<a href="#how-it-works">How it works</a>
+<a href="#what-we-estimate">What we estimate</a>
+<a href="#whats-included">What you get</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact" class="btn btn-dark">Send us your plans</a>
 </nav>
 </div>
 </header>
 
+<main id="top">
+
 <!-- HERO -->
-<section id="top" style="background-color: #3D2B1F; background-image: linear-gradient(rgba(251,246,240,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(251,246,240,0.05) 1px, transparent 1px); background-size: 40px 40px; color: #FBF6F0">
-<div style="max-width: 1240px; margin: 0 auto; padding: 96px 24px 0; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-end">
-<div style="flex: 999 1 560px; min-width: 0; padding-bottom: 96px">
-<p style="margin: 0 0 24px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #E8A07A">FOR BUILDERS · TRADES · INTERIOR DESIGNERS</p>
-<h1 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(56px, 9vw, 120px); line-height: 0.92; letter-spacing: -0.01em; text-transform: uppercase">Fixed-price estimates.<br><span style="color: #D96B43">Delivered fast.</span></h1>
-<p style="margin: 32px 0 0; max-width: 560px; font-size: 21px; color: #E6D9CB">We help builders, construction trades and interior designers price projects with confidence — without spending evenings running numbers.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px">
-<a href="#contact" style="background: #D96B43; color: #2C2118; text-decoration: none; font-weight: 700; font-size: 19px; padding: 18px 28px; display: inline-flex; align-items: center; gap: 12px">Send us your plans
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-<a href="#how-it-works" style="border: 1.5px solid #7A6656; color: #FBF6F0; text-decoration: none; font-weight: 600; font-size: 18px; padding: 18px 28px; display: inline-flex; align-items: center">See how it works</a>
+<section class="hero">
+<div class="hero-copy">
+<span class="eyebrow">Fit-outs · Builders · Trades · Designers</span>
+<h1>Fixed-price estimates. Delivered fast.</h1>
+<p class="lead">We help builders, construction trades and interior designers price projects with confidence — without spending evenings running numbers.</p>
+<div class="hero-ctas">
+<a href="#contact" class="btn btn-primary">Send us your plans <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#how-it-works" class="btn btn-ghost">See how it works</a>
 </div>
 </div>
-
-<!-- Estimate sheet card -->
-<div style="flex: 1 1 360px; min-width: 0; max-width: 440px; background: #FBF6F0; color: #3D2B1F; padding: 32px; position: relative; box-shadow: 16px 16px 0 #D96B43; margin-bottom: 64px">
-<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #3D2B1F; padding-bottom: 16px">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em">PROJECT ESTIMATE</span>
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #7A6656">FIXED PRICE</span>
-</div>
-<div style="display: flex; flex-direction: column; margin-top: 8px">
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #CBB9A6"><span>You send the plans</span><span style="font-weight: 600">✓</span></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #CBB9A6"><span>Quantities measured</span><span style="font-weight: 600">✓</span></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #CBB9A6"><span>Practical Australian rates</span><span style="font-weight: 600">✓</span></div>
-<div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px dashed #CBB9A6"><span>Ready for pricing or tender</span><span style="font-weight: 600">✓</span></div>
-</div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 24px; margin-top: 24px">
-<div>
-<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #7A6656">FLAT FEE PER JOB</div>
-<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 72px; line-height: 1">$320</div>
-</div>
-<div style="text-align: right">
-<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #7A6656">TURNAROUND</div>
-<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.1">2–5 days</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Stat strip -->
-<div style="border-top: 1px solid #54402F; background: #2C2118">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))">
-<div style="padding: 28px 0; display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 44px; color: #D96B43">$320</span><span style="color: #E6D9CB">Fixed price per job</span></div>
-<div style="padding: 28px 0; display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 44px; color: #D96B43">2–5</span><span style="color: #E6D9CB">Business day turnaround</span></div>
-<div style="padding: 28px 0; display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 44px; color: #D96B43">AUS</span><span style="color: #E6D9CB">Australia-wide service</span></div>
-</div>
+<div class="hero-photo">
+<img src="img/reception.jpg" alt="Commercial reception fitout with a curved tiled desk, timber joinery and a pendant light" width="1414" height="1052" fetchpriority="high">
+<div class="badge"><div><small>Flat fee per job</small><strong>$320</strong></div><div><small>Turnaround</small><strong>2–5 days</strong></div></div>
 </div>
 </section>
+<div class="trust"><ul>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>$320 flat, every job</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>2–5 business days</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Revisions included</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Australia-wide</li>
+</ul></div>
 
-<!-- HOW IT WORKS: CLIENT JOURNEY -->
-<section id="how-it-works" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px">
-<div class="journey-wrap">
-<div class="journey-side">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #A4482A">01 — THE CLIENT JOURNEY</p>
-<h2 style="margin: 0 0 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(44px, 6vw, 72px); line-height: 0.95; text-transform: uppercase">How it works</h2>
-<p style="margin: 0 0 32px; color: #5A4636">From plans to a fixed-price estimate in five simple steps. No surprises. No late nights.</p>
-<div style="background: #3D2B1F; color: #FBF6F0; padding: 28px">
-<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #E8A07A">YOUR TIMELINE</div>
-<div class="tl-bar" aria-hidden="true"><span style="width: 12%; background: #E8A07A"></span><span style="width: 20%; background: #FBF6F0; opacity: .35"></span><span style="width: 68%; background: #D96B43"></span></div>
-<div style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: #E6D9CB"><span>Send plans</span><span>Confirmed</span><span>Estimate delivered</span></div>
-<div style="display: flex; align-items: baseline; gap: 12px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #54402F">
-<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 48px; line-height: 1; color: #D96B43; white-space: nowrap">2–5</span><span style="color: #E6D9CB">business days, start to finish</span>
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="sec">
+<div class="wrap">
+<div class="sec-head">
+<div><span class="eyebrow">How it works</span><h2>Plans in. Fixed-price estimate out.</h2></div>
+<p style="font-weight:700;font-size:20px">$320 per job · 2–5 days</p>
 </div>
-<a href="#contact" style="margin-top: 22px; background: #D96B43; color: #2C2118; text-decoration: none; font-weight: 700; padding: 16px 20px; min-height: 48px; display: flex; justify-content: center; align-items: center">Start step 1 — send your plans</a>
-</div>
-</div>
-<ol class="journey" aria-label="Client journey steps">
-<li class="step reveal">
-<div class="node"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v4h16v-4"></path><path d="M12 4v12"></path><path d="M7 9l5-5 5 5"></path></svg></div>
-<div class="step-card">
-<div class="step-top"><span class="step-num">STEP 01</span><span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>DAY 1</span></div>
-<h3>Send us your plans</h3>
-<p>Email your plans to admin@navioestimate.com.au or use the form below. Add a short note about the job if you like — the plans are all we need.</p>
-<ul class="ticks"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Email or upload form</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>No paperwork to fill in</li></ul>
-</div>
-</li>
-<li class="step reveal">
-<div class="node"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 10h8"></path></svg></div>
-<div class="step-card">
-<div class="step-top"><span class="step-num">STEP 02</span><span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>WITHIN 1 BUSINESS DAY</span></div>
-<h3>We confirm & get started</h3>
-<p>We reply to confirm we’ve received your plans. The price is already fixed at $320, so there’s no quote to wait for — payment is made up front and our estimators get started.</p>
-<ul class="ticks"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Fixed $320 — paid up front</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>No hourly rates</li></ul>
-</div>
-</li>
-<li class="step reveal">
-<div class="node"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg></div>
-<div class="step-card">
-<div class="step-top"><span class="step-num">STEP 03</span><span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>OUR ESTIMATORS AT WORK</span></div>
-<h3>We measure & price</h3>
-<p>Our in-house estimators review your plans, measure the quantities and apply practical rates built for real Australian work.</p>
-<ul class="ticks"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Quantities measured from plans</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Practical Australian rates</li></ul>
-</div>
-</li>
-<li class="step reveal">
-<div class="node"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg></div>
-<div class="step-card">
-<div class="step-top"><span class="step-num">STEP 04</span><span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>2–5 BUSINESS DAYS</span></div>
-<h3>Receive your fixed-price estimate</h3>
-<p>You get a clear, professional fixed-price estimate — ready to use straight away.</p>
-<ul class="ticks"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Revisions included if plans change</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Ready for pricing or tendering</li></ul>
-</div>
-</li>
-<li class="step reveal">
-<div class="node"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg></div>
-<div class="step-card">
-<div class="step-top"><span class="step-num">STEP 05</span><span class="chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>YOUR EVENINGS BACK</span></div>
-<h3>Price with confidence</h3>
-<p>Use the numbers to price the job or submit your tender, and spend your evenings on the work that actually pays — not on spreadsheets.</p>
-<ul class="ticks"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Win work with solid numbers</li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>No more pricing at midnight</li></ul>
-</div>
-</li>
-</ol>
+<ol class="steps"><li class="step reveal">
+<div class="step-head"><span class="step-n">01</span><span class="step-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v4h16v-4"></path><path d="M12 4v12"></path><path d="M7 9l5-5 5 5"></path></svg></span></div>
+<h3>Send us your plans</h3><p>Email them or use the form. The plans are all we need.</p>
+</li><li class="step reveal">
+<div class="step-head"><span class="step-n">02</span><span class="step-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 7l9 6 9-6"></path></svg></span></div>
+<h3>We confirm &amp; get started</h3><p>Fixed at $320, paid up front. No quote to wait for.</p>
+</li><li class="step reveal">
+<div class="step-head"><span class="step-n">03</span><span class="step-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17L17 3l4 4L7 21H3z"></path><path d="M14 6l4 4"></path></svg></span></div>
+<h3>We measure &amp; price</h3><p>Quantities measured, practical Australian rates applied.</p>
+</li><li class="step reveal">
+<div class="step-head"><span class="step-n">04</span><span class="step-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg></span></div>
+<h3>Receive your estimate</h3><p>A clear, professional fixed-price estimate, ready to use.</p>
+</li><li class="step reveal">
+<div class="step-head"><span class="step-n">05</span><span class="step-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg></span></div>
+<h3>Price with confidence</h3><p>Price the job or submit your tender. Keep your evenings.</p>
+</li></ol>
+<div class="steps-note"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>We reply within 1 business day</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Plans change? All revisions included</span></div>
 </div>
 </section>
 
 <!-- WHAT WE ESTIMATE -->
-<section id="what-we-estimate" style="background: #FFFFFF; border-top: 1px solid #EADCCB; border-bottom: 1px solid #EADCCB">
-<div style="max-width: 1240px; margin: 0 auto; padding: 120px 24px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px">
-<div>
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #A4482A">02 — OUR WORK</p>
-<h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(44px, 6vw, 72px); line-height: 0.95; text-transform: uppercase">What we estimate</h2>
+<section id="what-we-estimate" class="sec" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<div class="wrap">
+<div class="sec-head">
+<div><span class="eyebrow">What we estimate</span><h2>Built for real Australian projects.</h2></div>
+<p class="lead" style="max-width:440px">Practical, usable estimates — from a café counter to a full office floor.</p>
 </div>
-<p style="margin: 0; max-width: 420px; color: #5A4636">We specialise in practical, usable estimates for real Australian projects.</p>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 24px">
-<!-- Featured -->
-<div style="flex: 999 1 520px; min-width: 0; background: #3D2B1F; color: #FBF6F0; padding: 48px; display: flex; flex-direction: column; gap: 24px">
-<span style="align-self: flex-start; background: #D96B43; color: #2C2118; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; padding: 6px 12px">MOST REQUESTED</span>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(40px, 6vw, 56px); line-height: 0.95; text-transform: uppercase">Commercial fitouts</h3>
-<p style="margin: 0; color: #E6D9CB; max-width: 560px">Office fitouts, retail spaces, hospitality interiors, medical suites and commercial refurbishments. Clear, fixed-price estimates that help you tender and price with confidence.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 32px; margin-top: 8px">
-<div style="display: flex; gap: 12px; align-items: center; border-top: 1px solid #54402F; padding-top: 12px"><span style="width: 8px; height: 8px; background: #D96B43; flex: none"></span>Office &amp; workplace fitouts</div>
-<div style="display: flex; gap: 12px; align-items: center; border-top: 1px solid #54402F; padding-top: 12px"><span style="width: 8px; height: 8px; background: #D96B43; flex: none"></span>Retail &amp; showroom spaces</div>
-<div style="display: flex; gap: 12px; align-items: center; border-top: 1px solid #54402F; padding-top: 12px"><span style="width: 8px; height: 8px; background: #D96B43; flex: none"></span>Hospitality &amp; F&amp;B interiors</div>
-<div style="display: flex; gap: 12px; align-items: center; border-top: 1px solid #54402F; padding-top: 12px"><span style="width: 8px; height: 8px; background: #D96B43; flex: none"></span>Medical &amp; professional suites</div>
-<div style="display: flex; gap: 12px; align-items: center; border-top: 1px solid #54402F; padding-top: 12px"><span style="width: 8px; height: 8px; background: #D96B43; flex: none"></span>Commercial refurbishments</div>
+<div class="feature reveal">
+<div class="feature-photo"><img src="img/bar.jpg" alt="Hospitality bar fitout with a curved green-tiled counter, leather stools and timber shelving" width="1385" height="1031" loading="lazy"></div>
+<div class="feature-copy">
+<span class="tag">Most requested</span>
+<h3>Commercial fitouts</h3>
+<p>Office fitouts, retail spaces, hospitality interiors, medical suites and commercial refurbishments. Clear, fixed-price estimates that help you tender and price with confidence.</p>
+<ul class="ticks">
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Office &amp; workplace fitouts</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Retail &amp; showroom spaces</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Hospitality &amp; F&amp;B interiors</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Medical &amp; professional suites</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Commercial refurbishments</li>
+</ul>
 </div>
 </div>
-<!-- Others -->
-<div style="flex: 1 1 360px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
-<div style="border: 1.5px solid #3D2B1F; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A4482A">A</span>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 28px; text-transform: uppercase">Residential projects</h3>
-<p style="margin: 0; color: #5A4636; font-size: 16px">Renovations, extensions, new builds and multi-unit work. Clear quantities and rates that make sense on site.</p>
+<div class="gallery">
+<figure class="reveal"><img src="img/cafe.jpg" alt="Café fitout with a tiled counter, espresso machine and bentwood chairs" width="1414" height="1052" loading="lazy"><figcaption>Café &amp; hospitality</figcaption></figure>
+<figure class="reveal"><img src="img/salon.jpg" alt="Salon fitout with oval mirrors, timber vanities and leather chairs" width="1386" height="1019" loading="lazy"><figcaption>Salons &amp; studios</figcaption></figure>
+<figure class="reveal"><img src="img/shopfront.jpg" alt="Retail shopfront with green timber frames and glazed tile base" width="1414" height="1020" loading="lazy"><figcaption>Retail &amp; shopfronts</figcaption></figure>
 </div>
-<div style="border: 1.5px solid #3D2B1F; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A4482A">B</span>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 28px; text-transform: uppercase">Trade packages</h3>
-<p style="margin: 0; color: #5A4636; font-size: 16px">Carpentry, joinery, plastering, painting, tiling and other trade-specific packages for builders and contractors.</p>
+<div class="split">
+<div class="resi reveal">
+<img src="img/outdoor.jpg" alt="Residential outdoor area with a pool, timber pergola and stone paving" width="1386" height="1019" loading="lazy">
+<div class="resi-copy"><h3>Residential projects</h3><p>Renovations, extensions, new builds and multi-unit work. Clear quantities and rates that make sense on site.</p></div>
 </div>
-<div style="border: 1.5px solid #3D2B1F; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A4482A">C</span>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 28px; text-transform: uppercase">Interior design packages</h3>
-<p style="margin: 0; color: #5A4636; font-size: 16px">Detailed interior scopes for designers who need accurate numbers without the late-night spreadsheet work.</p>
-</div>
-<div style="border: 1.5px solid #3D2B1F; padding: 28px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A4482A">D</span>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 28px; text-transform: uppercase">Small works &amp; alterations</h3>
-<p style="margin: 0; color: #5A4636; font-size: 16px">Shopfronts, tenancy works, minor structural alterations and general construction packages.</p>
+<div class="mini">
+<div class="reveal"><h3>Trade packages</h3><p>Carpentry, joinery, plastering, painting, tiling and other trade-specific packages for builders and contractors.</p></div>
+<div class="reveal"><h3>Interior design packages</h3><p>Detailed interior scopes for designers who need accurate numbers without the late-night spreadsheet work.</p></div>
+<div class="reveal"><h3>Small works &amp; alterations</h3><p>Shopfronts, tenancy works, minor structural alterations and general construction packages.</p></div>
 </div>
 </div>
-</div>
+<p class="img-note">Images show the types of projects we estimate.</p>
 </div>
 </section>
 
-<!-- WHAT'S IN YOUR ESTIMATE -->
-<section id="whats-included" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px">
+<!-- WHAT YOU GET -->
+<section id="whats-included" class="sec get">
+<div class="wrap">
 <div>
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #A4482A">03 — WHAT YOU GET</p>
-<h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(44px, 6vw, 72px); line-height: 0.95; text-transform: uppercase">What’s in your estimate</h2>
+<span class="eyebrow">What’s in your estimate</span>
+<h2>Ready for pricing or tender.</h2>
+<ul class="inc"><li><span class="inc-n">01</span><span><strong>Scope of works</strong><span class="inc-d">A written summary of exactly what’s been priced.</span></span></li><li><span class="inc-n">02</span><span><strong>Trade-by-trade breakdown</strong><span class="inc-d">Costs split by trade, so you see where the money goes.</span></span></li><li><span class="inc-n">03</span><span><strong>Measured quantities</strong><span class="inc-d">m², linear metres and item counts measured from your plans.</span></span></li><li><span class="inc-n">04</span><span><strong>Rates &amp; line-item pricing</strong><span class="inc-d">Material and labour rates shown line by line.</span></span></li><li><span class="inc-n">05</span><span><strong>Margin &amp; contingency</strong><span class="inc-d">Allowances shown clearly, not buried in the numbers.</span></span></li><li><span class="inc-n">06</span><span><strong>Inclusions &amp; exclusions</strong><span class="inc-d">What is — and isn’t — in the price. No surprises.</span></span></li></ul>
+<div class="files"><span class="file file-x">Editable Excel file</span><span class="file file-p">Clean PDF summary</span></div>
 </div>
-<p style="margin: 0; max-width: 440px; color: #5A4636">Everything you need to price the job or submit a tender — all included in the $320, every time.</p>
+<div class="pages reveal" aria-label="Example of a Navio estimate">
+<div class="page page-back" aria-hidden="true">
+<div class="pb-logo"><img src="logo.png" alt=""></div>
+<div class="pb-block"><small>Fixed-price project estimate</small><strong>Project estimate</strong></div>
+<div class="pb-meta"><div><b>Project</b>Office fitout, Level 3</div><div><b>Floor area</b>180 m²</div><div><b>Estimate no.</b>NE-0001</div></div>
 </div>
-<div class="est-wrap">
-<div class="est-doc reveal">
-<div class="sheet">
-<span class="stamp" aria-hidden="true">EXAMPLE</span>
-<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #7A6656">NAVIO ESTIMATE · COST ESTIMATE</div>
-<div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 30px; text-transform: uppercase; margin: 6px 0 2px">Office fitout — Level 3</div>
-<div style="font-size: 14px; color: #7A6656; margin-bottom: 18px">Trade summary · quantities measured from plans</div>
-<div style="overflow-x: auto">
-<table>
-<thead><tr><th>TRADE</th><th class="n">QTY</th><th>UNIT</th><th class="n">RATE</th><th class="n">TOTAL</th></tr></thead>
-<tbody><tr><td>Preliminaries</td><td class="n">1</td><td>item</td><td class="n">$4,800</td><td class="n">$4,800</td></tr><tr><td>Demolition &amp; strip-out</td><td class="n">180</td><td>m²</td><td class="n">$28</td><td class="n">$5,040</td></tr><tr><td>Partitions &amp; ceilings</td><td class="n">420</td><td>m²</td><td class="n">$95</td><td class="n">$39,900</td></tr><tr><td>Joinery</td><td class="n">1</td><td>item</td><td class="n">$18,500</td><td class="n">$18,500</td></tr><tr><td>Floor finishes</td><td class="n">180</td><td>m²</td><td class="n">$85</td><td class="n">$15,300</td></tr><tr><td>Painting</td><td class="n">640</td><td>m²</td><td class="n">$18</td><td class="n">$11,520</td></tr><tr><td>Electrical &amp; lighting</td><td class="n">1</td><td>item</td><td class="n">$22,400</td><td class="n">$22,400</td></tr>
-<tr class="sub"><td colspan="4">Subtotal</td><td class="n">$117,460</td></tr>
-<tr><td colspan="4">Margin (10%)</td><td class="n">$11,746</td></tr>
-<tr><td colspan="4">Contingency (5%)</td><td class="n">$5,873</td></tr>
-<tr class="tot"><td colspan="4">Total (ex GST)</td><td class="n">$135,079</td></tr>
-</tbody></table>
-</div>
-<p style="margin: 14px 0 0; font-size: 13px; color: #7A6656">Sample layout. Figures are for illustration only.</p>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px">
-<span class="filetag"><b>XLSX</b>Editable Excel file</span>
-<span class="filetag"><b>PDF</b>Clean PDF summary</span>
+<div class="page page-front">
+<div class="pf-k">Trade breakdown</div>
+<div class="pf-t">Office fitout, Level 3</div>
+<table><tr><td>Preliminaries</td><td class="q">1 item</td><td class="n">$4,800</td></tr><tr><td>Demolition &amp; strip-out</td><td class="q">180 m²</td><td class="n">$5,040</td></tr><tr><td>Partitions &amp; ceilings</td><td class="q">420 m²</td><td class="n">$39,900</td></tr><tr><td>Joinery</td><td class="q">1 item</td><td class="n">$18,500</td></tr><tr><td>Floor finishes</td><td class="q">180 m²</td><td class="n">$15,300</td></tr><tr><td>Painting</td><td class="q">640 m²</td><td class="n">$11,520</td></tr><tr><td>Electrical &amp; lighting</td><td class="q">1 item</td><td class="n">$22,400</td></tr>
+<tr class="s"><td colspan="2">Subtotal</td><td class="n">$117,460</td></tr>
+<tr class="s"><td colspan="2">Margin (10%)</td><td class="n">$11,746</td></tr>
+<tr class="s"><td colspan="2">Contingency (5%)</td><td class="n">$5,873</td></tr>
+<tr class="t"><td colspan="2">Total (ex GST)</td><td class="n">$135,079</td></tr>
+</table>
+<div class="pm2"><span>Price per m²</span><strong>$750</strong></div>
+<div class="pf-note">Sample layout. Figures are for illustration only.</div>
 </div>
 </div>
-<div class="inc-grid"><div class="inc reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h10M9 12h10M9 19h10"></path><path d="M4 5h1M4 12h1M4 19h1"></path></svg></div><h3>Scope of works</h3><p>A written summary of exactly what’s been priced, so everyone is working from the same page.</p></div><div class="inc reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></div><h3>Trade-by-trade breakdown</h3><p>Costs split by trade — from carpentry and plastering to electrical — so you can see where the money goes.</p></div><div class="inc reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17L17 3l4 4L7 21z"></path><path d="M7 13l2 2M10 10l2 2M13 7l2 2"></path></svg></div><h3>Measured quantities</h3><p>Quantities measured from your plans — m², linear metres and item counts.</p></div><div class="inc reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20"></path><path d="M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div><h3>Rates & line-item pricing</h3><p>Material and labour rates shown line by line, using practical Australian rates.</p></div><div class="inc reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5L5 19"></path><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></div><h3>Margin & contingency</h3><p>Margin and contingency allowances shown clearly, not buried in the numbers.</p></div><div class="inc reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l4 4L18 6"></path><path d="M15 15l5 5M20 15l-5 5"></path></svg></div><h3>Inclusions & exclusions</h3><p>A clear list of what is — and isn’t — in the price, so there are no surprises later.</p></div><div class="inc reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18"></rect><path d="M3 9h18M3 15h18M9 3v18"></path></svg></div><h3>Editable Excel file</h3><p>The full estimate as a spreadsheet you can adjust, reuse and build on.</p></div><div class="inc reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6M9 17h4"></path></svg></div><h3>Clean PDF summary</h3><p>A professional PDF ready to send to your client or include in a tender.</p></div></div>
 </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" style="background: #D96B43; color: #2C2118">
-<div style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
-<div style="flex: 999 1 520px; min-width: 0">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em">04 — TRANSPARENT PRICING</p>
-<h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(48px, 7vw, 88px); line-height: 0.92; text-transform: uppercase">One fixed price.<br>Every job.</h2>
-<p style="margin: 28px 0 0; max-width: 520px; font-size: 20px">No hourly rates. No surprises. You know exactly what you’ll pay before we start.</p>
+<section id="pricing" class="sec price">
+<div class="wrap">
+<div>
+<span class="eyebrow">Transparent pricing</span>
+<h2>One fixed price. Every job.</h2>
+<p class="lead">No hourly rates. No surprises. You know exactly what you’ll pay before we start.</p>
 </div>
-<div style="flex: 1 1 380px; min-width: 0; background: #3D2B1F; color: #FBF6F0; padding: 40px">
-<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px">
-<span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(80px, 12vw, 112px); line-height: 0.9; color: #D96B43">$320</span>
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #E6D9CB">PER JOB · FIXED</span>
-</div>
-<p style="margin: 20px 0 24px; color: #E6D9CB">A complete fixed-price project estimate prepared from your plans by our in-house estimation team.</p>
-<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px">
-<div style="display: flex; gap: 12px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="2.6" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Professional fixed-price estimate</div>
-<div style="display: flex; gap: 12px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="2.6" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Delivered in 2–5 business days</div>
-<div style="display: flex; gap: 12px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="2.6" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Practical rates built for Australian work</div>
-<div style="display: flex; gap: 12px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="2.6" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Ready to use for pricing or tendering</div>
-<div style="display: flex; gap: 12px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="2.6" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Revisions included if your plans change</div>
-<div style="display: flex; gap: 12px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="2.6" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Excel file + PDF summary</div>
-</div>
-<a href="#contact" style="background: #D96B43; color: #2C2118; text-decoration: none; font-weight: 700; font-size: 19px; padding: 18px 28px; display: flex; justify-content: center; align-items: center">Get started</a>
+<div class="price-card reveal">
+<div class="amt"><strong>$320</strong><span>Per job · fixed</span></div>
+<p>A complete fixed-price project estimate prepared from your plans by our in-house estimation team.</p>
+<ul>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Delivered in 2–5 business days</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Practical rates built for Australian work</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Ready for pricing or tendering</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Revisions included if your plans change</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Excel file + PDF summary</li>
+</ul>
+<a href="#contact" class="btn btn-primary">Get started <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </div>
 </section>
 
 <!-- WHY -->
-<section style="max-width: 1240px; margin: 0 auto; padding: 120px 24px">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #A4482A">05 — WHY NAVIO</p>
-<h2 style="margin: 0 0 56px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(44px, 6vw, 72px); line-height: 0.95; text-transform: uppercase; max-width: 800px">Built for busy construction owners</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 30px; text-transform: uppercase">You keep your evenings</h3>
-<p style="margin: 0; color: #5A4636">Send the plans when you have a moment. We handle the measuring and pricing so you don’t have to stay up late.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 30px; text-transform: uppercase">Fixed price, no surprises</h3>
-<p style="margin: 0; color: #5A4636">$320 per job. That’s it. You know the cost before you send the plans — no hourly rates, no scope creep on the estimate itself.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="1.8" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M14 7h7v7"></path></svg>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 30px; text-transform: uppercase">Practical &amp; usable numbers</h3>
-<p style="margin: 0; color: #5A4636">Our estimators understand real Australian construction. Numbers built to be used on site and in tenders, not just look neat on paper.</p>
+<section class="sec">
+<div class="wrap">
+<div class="sec-head"><div><span class="eyebrow">Why Navio</span><h2>Built for busy construction owners.</h2></div></div>
+<div class="why">
+<div class="reveal"><span class="why-ic"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg></span><h3>You keep your evenings</h3><p>Send the plans when you have a moment. We handle the measuring and pricing so you don’t have to stay up late.</p></div>
+<div class="reveal"><span class="why-ic"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span><h3>Fixed price, no surprises</h3><p>$320 per job. That’s it. You know the cost before you send the plans — no hourly rates, no scope creep on the estimate itself.</p></div>
+<div class="reveal"><span class="why-ic"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M14 7h7v7"></path></svg></span><h3>Practical &amp; usable numbers</h3><p>Our estimators understand real Australian construction. Numbers built to be used on site and in tenders, not just look neat on paper.</p></div>
 </div>
 </div>
 </section>
 
-<!-- ABOUT + QUOTE -->
-<section style="background: #3D2B1F; color: #FBF6F0">
-<div style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; gap: 64px">
-<div style="flex: 1 1 440px; min-width: 0">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #E8A07A">06 — ABOUT US</p>
-<h2 style="margin: 0 0 28px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 60px); line-height: 0.95; text-transform: uppercase">Australian-built for Australian work</h2>
-<p style="margin: 0 0 20px; color: #E6D9CB">Navio Estimate was started by a director with years of hands-on construction experience who saw the same problem again and again: business owners spending their evenings running numbers when they should be recovering or planning the next job.</p>
-<p style="margin: 0; color: #E6D9CB">We keep it simple. One fixed price. Fast turnaround. Clear estimates that help you price with confidence. That’s the whole service.</p>
+<!-- ABOUT -->
+<section class="sec about">
+<div class="wrap">
+<div>
+<span class="eyebrow">About us</span>
+<h2>Australian-built for Australian work.</h2>
+<p>Navio Estimate was started by a director with years of hands-on construction experience who saw the same problem again and again: business owners spending their evenings running numbers when they should be recovering or planning the next job.</p>
+<p>We keep it simple. One fixed price. Fast turnaround. Clear estimates that help you price with confidence. That’s the whole service.</p>
 </div>
-<figure style="flex: 1 1 440px; min-width: 0; margin: 0; border-left: 6px solid #D96B43; padding: 8px 0 8px 40px; display: flex; flex-direction: column; justify-content: center">
-<blockquote style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(32px, 4vw, 48px); line-height: 1.08">“Most owners find that one late night of pricing already costs more than $320 in their own time.”</blockquote>
-<figcaption style="margin-top: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.1em; color: #E6D9CB">— THE REASON WE EXIST</figcaption>
-</figure>
+<figure class="reveal"><blockquote>“Most owners find that one late night of pricing already costs more than $320 in their own time.”</blockquote><figcaption>— The reason we exist</figcaption></figure>
 </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="background: #FFFFFF; border-bottom: 1px solid #EADCCB">
-<div class="faq-wrap" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px">
+<section id="faq" class="sec faq">
+<div class="wrap">
 <div class="faq-side">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #A4482A">07 — FAQ</p>
-<h2 style="margin: 0 0 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(44px, 6vw, 72px); line-height: 0.95; text-transform: uppercase">Common questions</h2>
-<p style="margin: 0 0 28px; color: #5A4636">Everything you need to know before you send your plans.</p>
-<div style="border: 1.5px solid #3D2B1F; padding: 24px; display: flex; gap: 16px; align-items: flex-start">
-<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D96B43" stroke-width="2" style="flex: none" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M3 6l9 7 9-7"></path></svg>
-<div><div style="font-weight: 700">Still have a question?</div><div style="font-size: 16px; color: #5A4636; margin-top: 4px">Email <a href="mailto:admin@navioestimate.com.au">admin@navioestimate.com.au</a> — we reply within 1 business day.</div></div>
+<span class="eyebrow">FAQ</span>
+<h2>Common questions.</h2>
+<p class="lead">Everything you need to know before you send your plans.</p>
+<div class="ask"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M3 6l9 7 9-7"></path></svg><div><strong>Still have a question?</strong><p>Email <a href="mailto:admin@navioestimate.com.au">admin@navioestimate.com.au</a> — we reply within 1 business day.</p></div></div>
 </div>
-</div>
-<div class="faq-list">
-<details class="reveal" open>
+<div class="faq-list"><details class="reveal" open>
 <summary>How much does an estimate cost?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>$320 per job — one fixed price, paid up front. No hourly rates and no scope creep on the estimate itself.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>Is $320 really the price for every job?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>Yes. Every job is $320, whatever the type or size of the project. You know exactly what you’ll pay before you send the plans.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>When do I pay?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>Payment of $320 is made up front, before work on your estimate begins.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>What if my plans change?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>No problem — changes can be made, and all revisions are included in the $320. Just send us the updated plans.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>Do you work Australia-wide?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>Yes. We prepare estimates for projects right across Australia, using practical rates built for Australian work.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>How long does it take?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>Your estimate is delivered in 2–5 business days. We reply within 1 business day of receiving your plans to confirm we’re under way.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>What do I need to send you?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>Just the plans. Email them to <a href="mailto:admin@navioestimate.com.au">admin@navioestimate.com.au</a> or use the request form. A short note about the job is helpful but not required.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>What types of projects do you estimate?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>Commercial fitouts (offices, retail, hospitality, medical suites and refurbishments), residential projects (renovations, extensions, new builds and multi-unit work), trade packages, interior design packages, and small works &amp; alterations.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>What will I receive?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>A complete estimate prepared by our in-house team: scope of works, a trade-by-trade breakdown, measured quantities, line-item rates and pricing, margin and contingency, and a clear list of inclusions and exclusions.</p><p>You get it as an editable Excel file plus a clean PDF summary.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>Can I use the estimate for tendering?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>Yes. Our estimates are built to be used — for pricing jobs and for tenders, not just to look neat on paper.</p></div>
-</details>
-<details class="reveal">
+</details><details class="reveal">
 <summary>Who prepares the estimates?<span class="pm" aria-hidden="true"></span></summary>
 <div class="faq-a"><p>Our in-house estimation team. Navio Estimate was started by a director with years of hands-on construction experience, so the numbers are built for how jobs really run on site.</p></div>
-</details>
-</div>
+</details></div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; gap: 64px">
-<div style="flex: 1 1 380px; min-width: 0">
-<p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #A4482A">08 — GET STARTED</p>
-<h2 style="margin: 0 0 24px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(48px, 7vw, 88px); line-height: 0.92; text-transform: uppercase">Send us your plans</h2>
-<p style="margin: 0 0 40px; color: #5A4636; max-width: 440px">Ready to get a fixed-price estimate? Email the plans or fill in the form. We’ll take it from there.</p>
-<a href="mailto:admin@navioestimate.com.au" style="display: inline-flex; align-items: center; gap: 14px; font-size: 22px; font-weight: 600; color: #3D2B1F; text-decoration: none; border-bottom: 3px solid #D96B43; padding-bottom: 6px">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M3 6l9 7 9-7"></path></svg>admin@navioestimate.com.au</a>
-<p style="margin: 20px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #5A4636">Response within 1 business day</p>
-</div>
-<form id="estimateForm" action="https://formspree.io/f/your-form-id" method="POST" style="flex: 1 1 520px; min-width: 0; background: #FFFFFF; border: 1.5px solid #3D2B1F; padding: 40px; display: flex; flex-direction: column; gap: 20px">
+<section id="contact" class="sec contact">
+<div class="wrap">
 <div>
-<h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 32px; text-transform: uppercase">Request an estimate</h3>
-<p style="margin: 6px 0 0; color: #5A4636; font-size: 16px">Tell us a little about the job and we’ll follow up quickly.</p>
+<span class="eyebrow">Get started</span>
+<h2>Send us your plans.</h2>
+<p class="lead">Ready to get a fixed-price estimate? Email the plans or fill in the form. We’ll take it from there.</p>
+<a class="mail" href="mailto:admin@navioestimate.com.au"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M3 6l9 7 9-7"></path></svg>admin@navioestimate.com.au</a>
+<small>Response within 1 business day</small>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px">
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Your name<input type="text" name="name" required autocomplete="name" style="font: inherit; font-weight: 400; font-size: 16px; padding: 12px 14px; border: 1.5px solid #CBB9A6; background: #FFFCF8; min-height: 48px"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Company<input type="text" name="company" autocomplete="organization" style="font: inherit; font-weight: 400; font-size: 16px; padding: 12px 14px; border: 1.5px solid #CBB9A6; background: #FFFCF8; min-height: 48px"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Email<input type="email" name="email" required autocomplete="email" style="font: inherit; font-weight: 400; font-size: 16px; padding: 12px 14px; border: 1.5px solid #CBB9A6; background: #FFFCF8; min-height: 48px"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input type="tel" name="phone" autocomplete="tel" style="font: inherit; font-weight: 400; font-size: 16px; padding: 12px 14px; border: 1.5px solid #CBB9A6; background: #FFFCF8; min-height: 48px"></label>
+<form id="estimateForm" action="https://formspree.io/f/your-form-id" method="POST">
+<div><h3>Request an estimate</h3><p class="form-note" style="margin-top:6px">Tell us a little about the job and we’ll follow up quickly.</p></div>
+<div class="f2">
+<label>Your name<input type="text" name="name" required autocomplete="name"></label>
+<label>Company<input type="text" name="company" autocomplete="organization"></label>
+<label>Email<input type="email" name="email" required autocomplete="email"></label>
+<label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
 </div>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Project type
-<select name="project" style="font: inherit; font-weight: 400; font-size: 16px; padding: 12px 14px; border: 1.5px solid #CBB9A6; background: #FFFCF8; min-height: 48px">
-<option>Commercial fitout</option>
-<option>Residential / renovation</option>
-<option>Trade package</option>
-<option>Interior design package</option>
-<option>Other</option>
-</select></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Tell us about the job (or note that plans are attached)<textarea name="message" rows="4" style="font: inherit; font-weight: 400; font-size: 16px; padding: 12px 14px; border: 1.5px solid #CBB9A6; background: #FFFCF8; resize: vertical"></textarea></label>
-<button type="submit" style="font: inherit; font-weight: 600; font-size: 18px; background: #3D2B1F; color: #FBF6F0; border: none; padding: 18px 28px; min-height: 56px; cursor: pointer">Send request</button>
-<p style="margin: 0; font-size: 15px; color: #5A4636"><span id="formStatus" role="status"></span> Prefer email? Just send the plans straight to <a href="mailto:admin@navioestimate.com.au">admin@navioestimate.com.au</a></p>
+<label>Project type<select name="project"><option>Commercial fitout</option><option>Residential / renovation</option><option>Trade package</option><option>Interior design package</option><option>Other</option></select></label>
+<label>Tell us about the job (or note that plans are attached)<textarea name="message" rows="4"></textarea></label>
+<button type="submit" class="btn btn-dark">Send request</button>
+<p class="form-note"><span id="formStatus" role="status"></span> Prefer email? Just send the plans straight to <a href="mailto:admin@navioestimate.com.au">admin@navioestimate.com.au</a></p>
 </form>
+</div>
 </section>
 
-<!-- FOOTER -->
-<footer style="background: #2C2118; color: #E6D9CB">
-<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px">
-<div style="flex: 1 1 320px; min-width: 0">
-<div style="display: flex; align-items: center; gap: 14px"><img src="logo-mark.png" alt="" style="width: 48px; height: 48px; object-fit: cover; display: block"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: 0.06em; color: #FBF6F0">NAVIO ESTIMATE</span></div>
-<p style="margin: 12px 0 0; max-width: 360px; font-size: 16px">Fixed-price project estimates for builders, trades and interior designers. Delivered fast.</p>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 64px; font-size: 16px">
-<div style="display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #E8A07A">NAVIGATE</span>
-<a href="#how-it-works" style="color: #E6D9CB; text-decoration: none">How it works</a>
-<a href="#what-we-estimate" style="color: #E6D9CB; text-decoration: none">What we estimate</a>
-<a href="#pricing" style="color: #E6D9CB; text-decoration: none">Pricing</a>
-<a href="#faq" style="color: #E6D9CB; text-decoration: none">FAQ</a>
-<a href="#contact" style="color: #E6D9CB; text-decoration: none">Contact</a>
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #E8A07A">CONTACT</span>
-<a href="mailto:admin@navioestimate.com.au" style="color: #E6D9CB; text-decoration: none">admin@navioestimate.com.au</a>
-<a href="#contact" style="color: #E6D9CB; text-decoration: none">Send plans</a>
-</div>
-</div>
-</div>
-<div style="max-width: 1240px; margin: 0 auto; padding: 24px; border-top: 1px solid #54402F; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px">
-<span>© 2026 Navio Estimate. All rights reserved.</span>
-<span>Australia</span>
-</div>
-</footer>
+</main>
 
+<footer>
+<div class="wrap foot">
+<div>
+<div class="foot-brand"><img src="logo-mark.png" alt=""><span>Navio Estimate</span></div>
+<p>Fixed-price project estimates for builders, trades and interior designers. Delivered fast, Australia-wide.</p>
 </div>
+<div class="foot-cols">
+<div><b>Navigate</b><a href="#how-it-works">How it works</a><a href="#what-we-estimate">What we estimate</a><a href="#whats-included">What you get</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
+<div><b>Contact</b><a href="mailto:admin@navioestimate.com.au">admin@navioestimate.com.au</a><a href="#contact">Send plans</a></div>
+</div>
+</div>
+<div class="wrap legal"><span>© 2026 Navio Estimate. All rights reserved.</span><span>Australia</span></div>
+</footer>
 
 <script>
 (function(){
   var els=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
-  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
   els.forEach(function(e){io.observe(e)});
 })();
 (function(){
@@ -536,7 +558,7 @@ details[open] .pm::after{transform:translate(-50%,-50%) rotate(0deg)}
     e.preventDefault();
     var btn=form.querySelector('button[type="submit"]');
     var data=new FormData(form);
-    // No Formspree ID set yet: open the visitor's email app with the details filled in, so no request is lost.
+    // No Formspree ID yet: open the visitor's email app with the details filled in, so no request is lost.
     if(form.action.indexOf('your-form-id')!==-1){
       var body='Name: '+data.get('name')+'\nCompany: '+data.get('company')+'\nEmail: '+data.get('email')+'\nPhone: '+data.get('phone')+'\nProject type: '+data.get('project')+'\n\n'+data.get('message')+'\n\n(Please attach your plans to this email.)';
       window.location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Estimate request – '+(data.get('company')||data.get('name')))+'&body='+encodeURIComponent(body);
