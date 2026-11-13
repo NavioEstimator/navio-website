@@ -202,7 +202,8 @@ details[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
 .contact .mail{display:flex;width:fit-content;max-width:100%}
 .mail{display:inline-flex;align-items:center;gap:12px;font-size:22px;font-weight:700;text-decoration:none;border-bottom:3px solid var(--terra);padding-bottom:6px;word-break:break-all}
 .contact small{display:block;margin-top:18px;color:var(--muted);font-size:15px}
-form{background:var(--paper);border:1.5px solid var(--line2);padding:40px;display:grid;gap:18px}
+form,.ghl-form{background:var(--paper);border:1.5px solid var(--line2);padding:40px;display:grid;gap:18px}
+.ghl-form iframe{display:block;min-height:1038px}
 form h3{font-size:26px}
 .f2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
@@ -272,7 +273,7 @@ footer{background:var(--dark);color:#E6D9CB;font-size:16px}
   .price-card .amt strong{font-size:76px}
   .faq-list summary{font-size:19px;padding:20px 0}
   .faq-a{padding:0 0 22px}
-  form{padding:24px}
+  form,.ghl-form{padding:24px}
   .f2{grid-template-columns:1fr}
 }
 </style>
@@ -515,19 +516,27 @@ footer{background:var(--dark);color:#E6D9CB;font-size:16px}
 <a class="mail" href="tel:+61408069002" style="margin-top:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>0408 069 002</a>
 <small>Sydney-based · Response within 1 business day</small>
 </div>
-<form id="estimateForm" action="https://formspree.io/f/your-form-id" method="POST">
-<div><h3>Request an estimate</h3><p class="form-note" style="margin-top:6px">Tell us a little about the job and we’ll follow up quickly.</p></div>
-<div class="f2">
-<label>Your name<input type="text" name="name" required autocomplete="name"></label>
-<label>Company<input type="text" name="company" autocomplete="organization"></label>
-<label>Email<input type="email" name="email" required autocomplete="email"></label>
-<label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+<div class="ghl-form">
+<div><h3>Send your plans</h3><p class="form-note" style="margin-top:6px">Upload your plans and we’ll email your invoice. We start the moment it’s paid.</p></div>
+<iframe
+    src="https://api.leadconnectorhq.com/widget/form/lZqIjpMPMnvNFOTEpWzu"
+    style="width:100%;height:1038px;border:none;border-radius:3px"
+    id="inline-lZqIjpMPMnvNFOTEpWzu"
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Send Your Plans"
+    data-height="1038"
+    data-layout-iframe-id="inline-lZqIjpMPMnvNFOTEpWzu"
+    data-form-id="lZqIjpMPMnvNFOTEpWzu"
+    title="Send Your Plans">
+</iframe>
+<p class="form-note">Prefer email? Just send the plans straight to <a href="mailto:admin@navioestimate.com.au">admin@navioestimate.com.au</a></p>
 </div>
-<label>Project type<select name="project"><option>Commercial fitout</option><option>Residential / renovation</option><option>Trade package</option><option>Interior design package</option><option>Other</option></select></label>
-<label>Tell us about the job (or note that plans are attached)<textarea name="message" rows="4"></textarea></label>
-<button type="submit" class="btn btn-dark">Send request</button>
-<p class="form-note"><span id="formStatus" role="status"></span> Prefer email? Just send the plans straight to <a href="mailto:admin@navioestimate.com.au">admin@navioestimate.com.au</a></p>
-</form>
 </div>
 </section>
 
@@ -554,27 +563,8 @@ footer{background:var(--dark);color:#E6D9CB;font-size:16px}
   var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
   els.forEach(function(e){io.observe(e)});
 })();
-(function(){
-  var form=document.getElementById('estimateForm');
-  var status=document.getElementById('formStatus');
-  var EMAIL='admin@navioestimate.com.au';
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var btn=form.querySelector('button[type="submit"]');
-    var data=new FormData(form);
-    // No Formspree ID yet: open the visitor's email app with the details filled in, so no request is lost.
-    if(form.action.indexOf('your-form-id')!==-1){
-      var body='Name: '+data.get('name')+'\nCompany: '+data.get('company')+'\nEmail: '+data.get('email')+'\nPhone: '+data.get('phone')+'\nProject type: '+data.get('project')+'\n\n'+data.get('message')+'\n\n(Please attach your plans to this email.)';
-      window.location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Estimate request – '+(data.get('company')||data.get('name')))+'&body='+encodeURIComponent(body);
-      status.textContent='Your email app should open with your request ready to send — attach your plans and hit send.';
-      return;
-    }
-    btn.disabled=true;btn.textContent='Sending…';
-    fetch(form.action,{method:'POST',body:data,headers:{Accept:'application/json'}})
-      .then(function(r){if(!r.ok)throw 0;form.reset();btn.textContent='Request sent — we’ll be in touch';status.textContent='Thanks! We respond within 1 business day.';})
-      .catch(function(){btn.disabled=false;btn.textContent='Send request';status.textContent='Something went wrong. Please email your plans to '+EMAIL+'.';});
-  });
-})();
 </script>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6af6c0ce0fbf641fd193cdd8"></script>
 </body>
 </html>
