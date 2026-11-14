@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://navioestimate.com/sitemap.xml
